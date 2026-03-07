@@ -46,3 +46,8 @@ signed main(){
     }
     return 0;
 }
+
+// during tree dfs you do not need visited array as it is required for cycle detection or parent , here we will pass directly the parent
+
+
+// for lca binary uplifting (O(log(n)))
