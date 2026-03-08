@@ -35,12 +35,14 @@ void solve(){
     q.push(root);
     visited[root] = 1;
     vector<int> traversal;
+    vector<int> level(n,0);
     while(q.size()){
         int curr = q.front(); q.pop();
         traversal.push_back(curr);
         for(auto child : adjlist[curr]){
             if(!visited[child]){
                 visited[child] = 1;
+                level[child] += level[curr]+1;
                 q.push(child);
             }
         }
@@ -55,3 +57,6 @@ signed main(){
     }
     return 0;
 }
+
+// bfs gives shortest path from the source it edge weight not given
+// tc - O(V+E)
