@@ -43,8 +43,8 @@ void dijkstra(vector<vector<pair<int,int>>>& adjlist, int source,int n){
             }
         }
     }
-
 }
+// tc of (O((V+E)logV))
 
 void solve(){
     
